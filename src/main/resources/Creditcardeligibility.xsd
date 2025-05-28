@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="com/example/demo/creditcardservice/CreditCardEligibility"
+           xmlns="com/example/demo/creditcardservice/CreditCardEligibility"
+           elementFormDefault="qualified">
+    <xs:element name="CustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customerNIC" type="xs:string"/>
+                <xs:element name="age" type="xs:int"/>
+                <xs:element name="annualIncome" type="xs:double"/>
+                <xs:element name="creditScore" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Acknowledgement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="isEligible" type="xs:boolean"/>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
